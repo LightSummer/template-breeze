@@ -1,0 +1,49 @@
+<div id="main-wrapper">
+
+        <!-- Main -->
+            <div id="main" class="container">
+
+                <div class="row">
+                    <div class="7u 12u(mobile)">
+                        <section id="content">
+                            <header>
+                                <h2><stl:channel channelIndex="rightsidebar" Type="sloganbig"></stl:channel></h2>
+                                <span class="byline"><stl:channel channelIndex="rightsidebar" Type="slogansmall"></stl:channel></span>
+                            </header>
+                            <div class="row">
+                                    <stl:contents channelIndex="rightsidebar" totalNum="2">
+                                <div class="6u 12u(mobile)">
+                                    <p>{Content.Summary}</p>
+                                    <stl:a class="button">More Info</stl:a>
+                                </div>
+                                </stl:contents>  
+                            </div>
+                        </section>
+                    </div>
+                    <div class="5u 12u(mobile)">
+                        <section>
+                            <ul class="style1">
+                                <stl:contents channelIndex="news" totalNum="3">
+                                    <stl:if type="ItemIndex" operate="Equals" value="1">
+                                        <stl:yes>
+                                            <li class="first">
+                                                <span class="left"><span class="date"><stl:a><stl:content type="AddDate" formatString="MM"></stl:content><b><stl:content type="AddDate" formatString="dd"></stl:content></b></stl:a></span><strong></strong></span>
+                                                <span class="right"><stl:a></stl:a></span>
+                                            </li>
+                                        </stl:yes>
+                                        <stl:no>
+                                            <li>
+                                                <span class="left"><span class="date"><stl:a><stl:content type="AddDate" formatString="MM"></stl:content><b><stl:content type="AddDate" formatString="dd"></stl:content></b></stl:a></span><strong></strong></span>
+                                                <span class="right"><stl:a></stl:a></span>
+                                            </li>
+                                        </stl:no>
+                                    </stl:if>
+                                </stl:contents> 
+                            </ul>
+                        </section>
+                    </div>
+                </div>
+
+            </div>
+
+    </div>

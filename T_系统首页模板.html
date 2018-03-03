@@ -1,0 +1,106 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+        <stl:include file="@/include/header.html"></stl:include> 
+	</head>
+	<body class="homepage">
+		<!-- Header Wrapper -->
+		<div id="header-wrapper">
+
+			<!-- Header -->
+				<header id="header" class="container"> 
+                    <stl:include file="@/include/nav.html"></stl:include> 
+				</header>
+
+			<!-- Banner Wrapper -->
+				<div id="banner-wrapper"> 
+					<!-- Banner -->
+                    <div id="banner" class="container">
+                        <h2><stl:channel Type="sloganbig"></stl:channel></h2>
+                        <span><stl:channel Type="slogansmall"></stl:channel></span>
+                    </div> 
+				</div>
+
+		</div>
+
+	<!-- Featured Wrapper -->
+		<div class="wrapper-style1">
+
+			<!-- Featured -->
+				<div id="featured" class="container">
+					<div class="row 200%"> 
+                            <div class="6u 12u(mobile)">
+                                <section>
+                                    <div class="row">
+                                            <stl:contents channelIndex="lorem" totalNum="1">
+                                        <div class="6u 12u(mobile)">
+                                            <header>
+                                                <h2>{Content.Title}</h2>
+                                                <span class="byline">{Content.SubTitle}</span>
+                                            </header>
+                                            <p>{Content.Author}</p>
+                                            <stl:a class="image full"><img src="{Content.ImageUrl}" alt=""></stl:a>
+                                        </div>
+                                        <div class="6u 12u(mobile)">
+                                            <p>{Content.Summary}</p>
+                                            <stl:a class="button">More Info</stl:a>
+                                        </div>
+                                    </stl:contents>
+                                    </div>
+                                </section>
+                            </div>
+						<div class="6u 12u(mobile)">
+							<section>
+								<div class="row">
+                                        <stl:contents channelIndex="phasellus" totalNum="1">   
+									<div class="6u 12u(mobile)">
+										<stl:a class="image full"><img src="{Content.ImageUrl}" alt=""></stl:a>
+									</div>
+									<div class="6u 12u(mobile)">
+										<header>
+											<h2>{Content.Title}</h2>
+											<span class="byline">{Content.SubTitle}</span>
+										</header>
+										<p>{Content.Summary}</p>
+										<stl:a class="button">More Info</stl:a>
+									</div>
+                                </stl:contents>
+								</div>
+							</section>
+						</div>
+					</div>
+				</div>
+
+		</div>
+
+	<!-- Portfolio Wrapper -->
+		<div class="wrapper-style2">
+
+			<!-- Portfolio -->
+				<section id="portfolio" class="container">
+					<span class="pennant"><span class="icon fa-user"></span></span>
+					<header>
+						<h2><stl:channel channelIndex="leftsidebar" Type="sloganbig"></stl:channel></h2>
+						<span class="byline"><stl:channel channelIndex="leftsidebar" Type="slogansmall"></stl:channel></span>
+					</header>
+
+					<div class="row">
+                        <stl:contents channelIndex="leftsidebar" totalNum="4">
+                            <div class="3u 12u(mobile)">
+                                <stl:a class="image full"><img src="{Content.ImageUrl}" alt=""></stl:a>
+                            </div>
+                        </stl:contents> 
+					</div> 
+					<stl:channel channelIndex="leftsidebar" Type="Content"></stl:channel>
+				</section>
+
+		</div>
+
+	<!-- Main Wrapper -->
+    <stl:include file="@/include/wrapper.html"></stl:include>
+
+	<!-- Footer Wrapper -->
+    <stl:include file="@/include/footer.html"></stl:include>
+
+	</body>
+</html>

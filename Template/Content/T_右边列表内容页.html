@@ -1,0 +1,71 @@
+<!DOCTYPE HTML>
+<html>
+  <head>
+            <stl:include file="@/include/header.html"></stl:include> 
+  </head>
+  <body class="right-sidebar">
+    <!-- Header Wrapper -->
+    <div id="header-wrapper">
+
+      <!-- Header -->
+            <header id="header" class="container"> 
+                    <stl:include file="@/include/nav.html"></stl:include> 
+        </header>
+
+    </div>
+
+  <!-- Wide Content Wrapper -->
+    <div class="wrapper-style2">
+
+      <!-- Wide Content -->
+        <div class="container">
+          <div class="row 200%">
+            <div class="8u 12u(mobile)">
+              <article id="left-content">
+                <header>
+                  <h2>{Content.Title}</h2>
+                                </header>
+                                <stl:if type="ImageUrl" operate="NotEmpty">
+                                        <stl:a class="image left"><img src="{Content.ImageUrl}" alt=""></stl:a>
+                                    </stl:if>
+                                    {Content.Content} 
+                            </article>
+            </div>
+            <div class="4u 12u(mobile)">
+              <section id="right-sidebar">
+                <header class="title">
+                  <h2>{Channel.Title}</h2>
+                </header>
+                <ul class="style3">
+                                        <stl:contents totalNum="10">
+                                                <stl:if type="ItemIndex" operate="Equals" value="1">
+                                                        <stl:yes>
+                                            <li class="first">
+                                                <p class="date"><stl:a><stl:content type="AddDate" formatString="MM"></stl:content><b><stl:content type="AddDate" formatString="dd"></stl:content></b></stl:a></p>
+                                                <h3><stl:a>{Content.Title}</stl:a></h3>
+                                                <p><stl:a>{Content.SubTitle}</stl:a></p>
+                                            </li>
+                                            </stl:yes>
+                                            <stl:no>
+                                                <li>
+                                                    <p class="date"><stl:a><stl:content type="AddDate" formatString="MM"></stl:content><b><stl:content type="AddDate" formatString="dd"></stl:content></b></stl:a></p>
+                                                    <h3><stl:a>{Content.Title}</stl:a></h3>
+                                                    <p><stl:a>{Content.SubTitle}</stl:a></p>
+                                                </li>
+                                            </stl:no>
+                                            </stl:if>
+                                        </stl:contents>  
+                </ul>
+                <a style="display:none;" href="#" class="button">Browse Archive</a>
+              </section>
+            </div>
+          </div>
+        </div>
+    </div>
+
+  <!-- Main Wrapper -->
+    <stl:include file="@/include/wrapper.html"></stl:include> 
+  <!-- Footer Wrapper -->
+    <stl:include file="@/include/footer.html"></stl:include>
+  </body>
+</html>

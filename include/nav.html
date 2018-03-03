@@ -1,0 +1,27 @@
+<!-- Logo -->
+<div id="logo">
+    <h1>{stl:value type=Logo}</h1>
+</div> 
+<!-- Nav --> 
+<nav id="nav">
+    <ul>
+        <li class="current_page_item"><a href="{Stl.SiteUrl}/"><stl:channel channelIndex="homepage"></stl:channel></a></li>
+        <stl:channels groupChannel="nav" topLevel="0">  
+            <stl:if type="CountOfChannels" operate="GreatThan" value="0">
+                <stl:yes>
+                    <li>
+                        <stl:a></stl:a>
+                        <ul>
+                            <stl:channels>
+                                <li><stl:a></stl:a></li>
+                            </stl:channels>  
+                        </ul>
+                    </li>
+                </stl:yes> 
+                <stl:no>
+                    <li><stl:a></stl:a></li>
+                </stl:no>
+            </stl:if> 
+        </stl:channels>   
+    </ul>
+</nav>

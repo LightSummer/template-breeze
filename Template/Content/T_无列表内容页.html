@@ -1,0 +1,40 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+        <stl:include file="@/include/header.html"></stl:include> 
+</head>
+<body class="no-sidebar">
+	<!-- Header Wrapper -->
+	<div id="header-wrapper">
+
+		<!-- Header -->
+		<header id="header" class="container"> 
+                <stl:include file="@/include/nav.html"></stl:include> 
+            </header>
+
+
+	</div>
+
+	<!-- Wide Content Wrapper -->
+	<div class="wrapper-style2">
+
+		<!-- Wide Content -->
+		<article id="wide-content" class="container">
+			<header>
+                    <h2>{Content.Title}</h2>
+			</header>
+			<stl:if type="ImageUrl" operate="NotEmpty">
+                <stl:a class="image left"><img src="{Content.ImageUrl}" alt=""></stl:a>
+            </stl:if>
+            {Content.Content}
+		</article>
+
+	</div>
+
+	<!-- Main Wrapper -->
+    <stl:include file="@/include/wrapper.html"></stl:include> 
+	<!-- Footer Wrapper -->
+    <stl:include file="@/include/footer.html"></stl:include>
+
+</body>
+</html>

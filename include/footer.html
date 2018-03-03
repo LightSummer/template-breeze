@@ -1,0 +1,58 @@
+<div id="footer-wrapper"> 
+    <!-- Footer -->
+    <div id="footer" class="container">
+        <div class="row">
+            <stl:contents channelIndex="getintouch" totalNum="2">
+                <stl:if type="ItemIndex" operate="Equals" value="1">
+                        <stl:yes>
+                <div class="7u 12u(mobile)">
+                    <section> 
+                        <header>
+                            <h2>{Content.Title}</h2>
+                        </header>
+                        <p>{Content.Summary}</p>
+                        <div class="row">
+                            <div class="7u 12u(mobile)">
+                                <stl:a class="image full"><img src="{Content.ImageUrl}" alt=""></a>
+                            </div>
+                            <div class="5u 12u(mobile)">
+                                    {Content.Content}
+                                <ul class="contact" style="display:none;">
+                                    <li><a href="#" class="icon fa-twitter"><span>Twitter</span></a></li>
+                                    <li><a href="#" class="icon fa-facebook"><span>Facebook</span></a></li>
+                                    <li><a href="#" class="icon fa-instagram"><span>Instagram</span></a></li>
+                                    <li><a href="#" class="icon fa-pinterest"><span>Pinterest</span></a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </section>
+                </div>
+                </stl:yes>
+                <stl:no>
+                    <div class="5u 12u(mobile)">
+                        <section>
+                            <header>
+                                <h2>{Content.Title}</h2>
+                            </header>
+                            <p>{Content.Summary}</p>
+                            <stl:a class="button">More Info</stl:a>
+                        </section>
+                    </div>
+                </stl:no>
+            </stl:contents>
+        </div> 
+    </div>
+
+<!-- Copyright -->
+    <div id="copyright">
+        {Stl.Copyright}
+    </div>
+
+</div> 
+<!-- Scripts -->
+<script src="{Stl.SiteUrl}/assets/js/jquery.min.js"></script>
+<script src="{Stl.SiteUrl}/assets/js/jquery.dropotron.min.js"></script>
+<script src="{Stl.SiteUrl}/assets/js/skel.min.js"></script>
+<script src="{Stl.SiteUrl}/assets/js/skel-viewport.min.js"></script>
+<script src="{Stl.SiteUrl}/assets/js/util.js"></script>
+<script src="{Stl.SiteUrl}/assets/js/main.js"></script>
